@@ -1,13 +1,11 @@
 {
   "name": "Junior Tennis Tracker",
   "short_name": "Tennis Tracker",
-  "description": "Track junior tennis matches point by point, even offline.",
-  "id": "./",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f2f5f8",
   "theme_color": "#123d5a",
+  "background_color": "#f2f5f8",
   "icons": [
     {
       "src": "./icons/icon-192.png",
