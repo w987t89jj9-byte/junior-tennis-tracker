@@ -54,3 +54,20 @@ New match defaults: one set; No-Ad (40-40 deciding point); first to 6 games with
 Exports retain schema junior-tennis-v1 for compatibility with the existing dashboard and backups. CSV now includes game_scoring and set_rule. Existing shot tracking is unchanged.
 
 Offline cache version is bumped. Verify offline loading and saved match history after deploying. Export backups regularly.
+
+TENNIS TRACKER V3.7 — SAME-DAY MATCH ORDER
+
+BACK UP FIRST: Export All Matches JSON from the currently installed iPhone app.
+
+GITHUB PAGES: Upload and replace index.html, mobile_tracker.html, and sw.js from this package in the SAME repository. Commit. Wait for Pages to deploy. Do not uninstall your home-screen app or clear its site data. Open online, close/reopen if cached. Check header says V3.7.
+
+NEW MATCHES: Enter match date and optionally start time (HH:MM) and/or match number for the day. When match number is blank, app assigns next available number for that date. The existing local storage key and JSON schema are unchanged.
+
+DESKTOP: Use tennis_dashboard_v3_7.py instead of V3.6. Choose your match JSON folder. Match selectors show date, time, match number, opponent. Trends use unique M1, M2, ... labels with full hover details. Last 5 matches and scorecard use match ordering rather than distinct days.
+
+OLDER DATA: Remains compatible. When time/sequence is absent, the dashboard falls back to createdAt; for matches without any usable ordering fields, same-day order is inherently uncertain.
+
+NOTE: This update does not add editing of existing match metadata. To correct old tournament match order, edit a backed-up JSON export's matchTime (HH:MM) or matchSequence (positive integer) and reimport, preserving match IDs.
+
+TEST: Before tournament use, start two dummy matches on the same day and verify match picker, JSON export, and dashboard last-5 ordering.
+
