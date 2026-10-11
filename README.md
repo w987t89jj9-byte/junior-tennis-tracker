@@ -34,3 +34,23 @@ NOTES
 - The Python dashboard is included; run it on your Windows computer after exporting JSON.
 - To update the app later, upload the updated files to the same repository. Export your data before updating.
 - Public GitHub Pages means the app source is publicly accessible; your locally saved match data is not uploaded by the app.
+
+JUNIOR TENNIS TRACKER V3 — SAFE UPDATE
+
+Before updating: open the installed V2 app and Export all matches (JSON). Save the backup outside the app.
+
+Upload these files into the SAME GitHub Pages repository, replacing matching files:
+- index.html
+- mobile_tracker.html
+- sw.js
+- manifest.webmanifest (unchanged)
+- icons/ (unchanged, optional to reupload)
+
+Do not upload the Python script or this README to the website. GitHub Pages redeploys automatically.
+On your iPhone, connect to the internet, open the home-screen app, close and reopen it if necessary until it shows V3. Do NOT delete the home-screen app or clear website storage.
+
+New match defaults: one set; No-Ad (40-40 deciding point); first to 6 games with no two-game margin (6-5 ends set). You can select standard rules for other tournaments. Match settings are stored with each match. Existing matches with no rule fields retain standard advantage/tiebreak scoring.
+
+Exports retain schema junior-tennis-v1 for compatibility with the existing dashboard and backups. CSV now includes game_scoring and set_rule. Existing shot tracking is unchanged.
+
+Offline cache version is bumped. Verify offline loading and saved match history after deploying. Export backups regularly.
